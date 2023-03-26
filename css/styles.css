@@ -352,8 +352,6 @@ body {
 /**================= OUR WORK ========================*/
 .work-conteiner {
   padding-top: 96px;
-  /* padding left: 0px;
-  padding-right: 0px; */
 }
 
 .btn-list {
@@ -385,7 +383,10 @@ body {
   margin-bottom: var(--section-padding-bootom-);
   margin-top: calc(-1 * var(--card-gap-));
   margin-left: calc(-1 * var(--card-gap-));
+  background-color: teal;
+  justify-content: center;
 }
+
 .examples-list {
   display: flex;
   padding: 0;
@@ -395,7 +396,7 @@ body {
 .examples-item {
   margin-top: var(--card-gap-);
   margin-left: var(--card-gap-);
-  border: 1px solid #e7e9fc;
+  /* border: 1px solid #e7e9fc; */
 }
 
 .examples-thumb {
