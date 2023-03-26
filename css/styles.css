@@ -83,7 +83,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 1px solid tomato;
 }
 
 /* todo ============ GENERAL ======================*/
@@ -96,7 +95,6 @@ body {
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--accent-color);
-  flex-basis: calc((100% / 4)-24 * 3);
 }
 
 .nav-mane {
@@ -259,14 +257,7 @@ body {
 
 .products-list {
   display: flex;
-}
-
-.products-item {
-  flex-basis: calc(100% / 4 - var);
-}
-
-.products-item:not(:last-child) {
-  margin-right: 24px;
+  gap: 24px;
 }
 
 /**================= OUR TEAM =======================*/
@@ -352,6 +343,8 @@ body {
 /**================= OUR WORK ========================*/
 .work-conteiner {
   padding-top: 96px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .btn-list {
@@ -360,8 +353,6 @@ body {
   gap: 24px;
   margin: auto;
   margin-bottom: 72px;
-
-  outline: 1px solid teal;
 }
 
 .btn-portfolio {
@@ -371,6 +362,7 @@ body {
   border: 1px solid #e7e9fc;
   border-radius: 4px;
 }
+
 .portfolio-btn:hover,
 .portfolio-btn:focus {
   background-color: var(--active-states);
@@ -379,12 +371,10 @@ body {
 
 /**================= NET ========================*/
 .examples-conteiner {
-  padding: 0;
+  padding: 0px;
   margin-bottom: var(--section-padding-bootom-);
   margin-top: calc(-1 * var(--card-gap-));
   margin-left: calc(-1 * var(--card-gap-));
-  background-color: teal;
-  justify-content: center;
 }
 
 .examples-list {
@@ -396,7 +386,7 @@ body {
 .examples-item {
   margin-top: var(--card-gap-);
   margin-left: var(--card-gap-);
-  /* border: 1px solid #e7e9fc; */
+  border: 1px solid #e7e9fc;
 }
 
 .examples-thumb {
