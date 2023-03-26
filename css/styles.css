@@ -11,6 +11,7 @@
   --secondary-font: 'Raleway', sans-serif;
   --section-padding-top-: 120px;
   --section-padding-bootom-: 120px;
+  --card-gap-: 24px;
 }
 
 /**================= RESET =======================*/
@@ -49,6 +50,7 @@ body {
 
 /** BUTTONS =======================*/
 .button {
+  display: block;
   font-family: var(--primary-font);
   font-style: normal;
   font-weight: 500;
@@ -81,7 +83,7 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  /* outline: 1px solid tomato; */
+  outline: 1px solid tomato;
 }
 
 /* todo ============ GENERAL ======================*/
@@ -188,8 +190,7 @@ body {
 }
 .hero-conteiner {
   flex-wrap: wrap;
-  padding-top: 188px;
-  padding-bottom: 188px;
+  padding: 188px 0px;
 }
 .hero-title {
   display: inline-block;
@@ -202,11 +203,10 @@ body {
 }
 
 .hero-btn {
-  display: block;
   padding: 16px 32px;
   border-radius: 4px;
   min-width: 169px;
-  margin: auto;
+  margin: 0px auto;
 
   line-height: 1.19;
   color: #ffffff;
@@ -259,11 +259,10 @@ body {
 
 .products-list {
   display: flex;
-  /* justify-content: space-between; */
 }
 
 .products-item {
-  flex-basis: calc((100% - 48px) / 3);
+  flex-basis: calc(100% / 4 - var);
 }
 
 .products-item:not(:last-child) {
@@ -292,23 +291,26 @@ body {
 
 .team-list {
   display: flex;
-  justify-content: space-between;
-  background-color: var(--overlays-scdr-color);
+  background-color: var(--card-gap-);
+  margin-left: calc(-1 * var(--card-gap-));
+  margin-top: calc(-1 * var(--card-gap-));
 }
-.team-list-item {
-  flex-basis: calc((100% - 72px) / 4);
 
+.team-list-item {
+  flex-basis: calc((100% -72px) / 4);
+  margin-left: var(--card-gap-);
+  margin-top: var(--card-gap-);
   background: #ffffff;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
-.team-name {
-  margin-top: 32px;
+.team-card {
+  padding: 32px 16px;
 }
-.tem-text {
-  margin-top: 8px;
-  margin-bottom: 32px;
+
+.team-name {
+  margin-bottom: 8px;
 }
 
 /**================= FOOTER =======================*/
@@ -335,6 +337,7 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+
 .footer-text {
   margin-top: 16px;
   width: 264px;
@@ -347,12 +350,60 @@ body {
 /*?================= PAGE PORTFOLIO ==================*/
 
 /**================= OUR WORK ========================*/
-.portfolio-btn {
+.work-conteiner {
+  padding-top: 96px;
+  /* padding left: 0px;
+  padding-right: 0px; */
+}
+
+.btn-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: auto;
+  margin-bottom: 72px;
+
+  outline: 1px solid teal;
+}
+
+.btn-portfolio {
+  padding: 12px 24px;
   line-height: 1.5;
   color: #4d5ae5;
+  border: 1px solid #e7e9fc;
+  border-radius: 4px;
 }
 .portfolio-btn:hover,
 .portfolio-btn:focus {
   background-color: var(--active-states);
   color: #ffffff;
+}
+
+/**================= NET ========================*/
+.examples-conteiner {
+  padding: 0;
+  margin-bottom: var(--section-padding-bootom-);
+  margin-top: calc(-1 * var(--card-gap-));
+  margin-left: calc(-1 * var(--card-gap-));
+}
+.examples-list {
+  display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+  flex-basis: calc((100% -48px) / 3);
+}
+.examples-item {
+  margin-top: var(--card-gap-);
+  margin-left: var(--card-gap-);
+  border: 1px solid #e7e9fc;
+}
+
+.examples-thumb {
+  padding-top: 32px;
+  padding-left: 16px;
+  padding-bottom: 32px;
+}
+
+.thumb-title {
+  margin-bottom: 8px;
 }
