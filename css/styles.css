@@ -386,13 +386,14 @@ body {
 .examples-item {
   margin-top: var(--card-gap-);
   margin-left: var(--card-gap-);
-  border: 1px solid #e7e9fc;
 }
 
 .examples-thumb {
   padding-top: 32px;
   padding-left: 16px;
   padding-bottom: 32px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
 }
 
 .thumb-title {
