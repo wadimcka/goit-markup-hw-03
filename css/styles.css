@@ -11,7 +11,8 @@
   --secondary-font: 'Raleway', sans-serif;
   --section-padding-top-: 120px;
   --section-padding-bootom-: 120px;
-  --card-gap-: 24px;
+  --card-margin-horizontal: 24px;
+  --card-margin-vertical: 48px;
 }
 
 /**================= RESET =======================*/
@@ -88,13 +89,13 @@ body {
 /* todo ============ GENERAL ======================*/
 /**================= HEADER =======================*/
 .header-mane {
-  padding-top: 25.5px;
+  padding: 24px 0px;
+  border-bottom: 1px solid var(--accent-color);
 }
 
 .header-conteiner {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--accent-color);
 }
 
 .nav-mane {
@@ -104,8 +105,8 @@ body {
 
 .logo-link {
   margin-right: 76px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  /* padding-top: 15px;
+  padding-bottom: 15px; */
 
   color: var(--active-states);
   font-family: var(--secondary-font);
@@ -138,8 +139,8 @@ body {
 
 .menu-link {
   display: block;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  /* padding-top: 15px;
+  padding-bottom: 15px; */
 
   font-style: normal;
   font-weight: 500;
@@ -166,8 +167,8 @@ body {
 }
 
 .header-contact {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  /* padding-top: 15px;
+  padding-bottom: 15px; */
 
   color: var(--main-text-color);
   font-style: normal;
@@ -185,10 +186,10 @@ body {
 .hero {
   background-color: var(--overlays-color);
   text-align: center;
+  padding: 188px 0px;
 }
 .hero-conteiner {
   flex-wrap: wrap;
-  padding: 188px 0px;
 }
 .hero-title {
   display: inline-block;
@@ -218,29 +219,30 @@ body {
 }
 
 /* * =============== ADVANTAGES =====================*/
-.advantages-conteiner {
+.advantages {
   padding-top: var(--section-padding-top-);
 }
 
 .advantages-list {
   display: flex;
-  /* gap: 24px; */
 }
 
 .advantages-item {
-  flex-basis: calc((100% - 72px) / 4);
+  flex-basis: calc(100% / 4);
   /* width: 264px; */
   /* justify-content: space-between; */
 }
+
 .advantages-item:not(:last-child) {
-  margin-right: 24px;
+  margin-right: var(--card-margin-horizontal);
 }
+
 .advantages-subtitle {
   margin-bottom: 8px;
 }
 
 /**================= PRODUCTS =======================*/
-.products-conteiner {
+.products {
   padding-top: var(--section-padding-top-);
   padding-bottom: var(--section-padding-bootom-);
 }
@@ -254,28 +256,24 @@ body {
   text-transform: capitalize;
   color: var(--headings-text-color);
 }
-.photo-conteiner {
-  flex-basis: calc((100% -48px) / 3);
-  margin-top: calc(-1 * var(--card-gap-));
-  margin-left: calc(-1 * var(--card-gap-));
-}
 
 .products-list {
   display: flex;
   /* gap: 24px; */
+  flex-basis: calc(100% / 3 - var(--card-margin-horizontal));
+  margin-top: calc(-1 * var(--card-margin-horizontal));
+  margin-left: calc(-1 * var(--card-margin-horizontal));
 }
 
 .products-item {
-  margin-top: var(--card-gap-);
-  margin-left: var(--card-gap-);
+  margin-top: var(--card-margin-horizontal);
+  margin-left: var(--card-margin-horizontal);
 }
 
 /**================= OUR TEAM =======================*/
 .team {
   background-color: var(--overlays-scdr-color);
   text-align: center;
-}
-.team-conteiner {
   padding-top: var(--section-padding-top-);
   padding-bottom: var(--section-padding-bootom-);
 }
@@ -292,15 +290,14 @@ body {
 
 .team-list {
   display: flex;
-  background-color: var(--card-gap-);
-  margin-left: calc(-1 * var(--card-gap-));
-  margin-top: calc(-1 * var(--card-gap-));
+  margin-left: calc(-1 * var(--card-margin-horizontal));
+  margin-top: calc(-1 * var(--card-margin-horizontal));
 }
 
 .team-list-item {
-  flex-basis: calc((100% -72px) / 4);
-  margin-left: var(--card-gap-);
-  margin-top: var(--card-gap-);
+  flex-basis: calc(100% / 4 - var(--card-margin-horizontal));
+  margin-left: var(--card-margin-horizontal);
+  margin-top: var(--card-margin-horizontal);
   background: #ffffff;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -317,9 +314,6 @@ body {
 /**================= FOOTER =======================*/
 .footer {
   background-color: var(--overlays-color);
-}
-
-.footer-conteiner {
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -351,10 +345,9 @@ body {
 /*?================= PAGE PORTFOLIO ==================*/
 
 /**================= OUR WORK ========================*/
-.work-conteiner {
+.portfolio-mane {
   padding-top: 96px;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-bottom: var(--section-padding-bootom-);
 }
 
 .btn-list {
@@ -380,24 +373,23 @@ body {
 }
 
 /**================= NET ========================*/
-.examples-conteiner {
-  padding: 0px;
-  margin-bottom: var(--section-padding-bootom-);
-  margin-top: calc(-1 * var(--card-gap-));
-  margin-left: calc(-1 * var(--card-gap-));
-}
 
 .examples-list {
   display: flex;
-  padding: 0;
+  list-style: none;
   flex-wrap: wrap;
-  flex-basis: calc((100% -48px) / 3);
-}
-.examples-item {
-  margin-top: var(--card-gap-);
-  margin-left: var(--card-gap-);
+  margin-top: calc(-1 * var(--card-margin-vertical));
+  margin-left: calc(-1 * var(--card-margin-horizontal));
 }
 
+.examples-item {
+  margin-top: 48px;
+  margin-left: var(--card-margin-horizontal);
+  flex-basis: calc(100% / 3- var(--card-margin-horizontal));
+}
+.examples-link {
+  margin-right: 0px;
+}
 .examples-thumb {
   padding-top: 32px;
   padding-left: 16px;
