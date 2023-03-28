@@ -105,8 +105,6 @@ body {
 
 .logo-link {
   margin-right: 76px;
-  /* padding-top: 15px;
-  padding-bottom: 15px; */
 
   color: var(--active-states);
   font-family: var(--secondary-font);
@@ -139,8 +137,6 @@ body {
 
 .menu-link {
   display: block;
-  /* padding-top: 15px;
-  padding-bottom: 15px; */
 
   font-style: normal;
   font-weight: 500;
@@ -167,9 +163,6 @@ body {
 }
 
 .header-contact {
-  /* padding-top: 15px;
-  padding-bottom: 15px; */
-
   color: var(--main-text-color);
   font-style: normal;
   font-size: 16px;
@@ -229,8 +222,6 @@ body {
 
 .advantages-item {
   flex-basis: calc(100% / 4);
-  /* width: 264px; */
-  /* justify-content: space-between; */
 }
 
 .advantages-item:not(:last-child) {
@@ -259,10 +250,9 @@ body {
 
 .products-list {
   display: flex;
-  /* gap: 24px; */
-  flex-basis: calc(100% / 3 - var(--card-margin-horizontal));
   margin-top: calc(-1 * var(--card-margin-horizontal));
   margin-left: calc(-1 * var(--card-margin-horizontal));
+  flex-basis: calc(100% / 3 - var(--card-margin-horizontal));
 }
 
 .products-item {
@@ -366,8 +356,8 @@ body {
   border-radius: 4px;
 }
 
-.portfolio-btn:hover,
-.portfolio-btn:focus {
+.btn-portfolio:hover,
+.btn-portfolio:focus {
   background-color: var(--active-states);
   color: #ffffff;
 }
