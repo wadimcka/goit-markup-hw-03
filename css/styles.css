@@ -252,12 +252,12 @@ body {
   display: flex;
   margin-top: calc(-1 * var(--card-margin-horizontal));
   margin-left: calc(-1 * var(--card-margin-horizontal));
-  flex-basis: calc(100% / 3 - var(--card-margin-horizontal));
 }
 
 .products-item {
   margin-top: var(--card-margin-horizontal);
   margin-left: var(--card-margin-horizontal);
+  flex-basis: calc(100% / 3 - var(--card-margin-horizontal));
 }
 
 /**================= OUR TEAM =======================*/
@@ -375,7 +375,7 @@ body {
 .examples-item {
   margin-top: 48px;
   margin-left: var(--card-margin-horizontal);
-  flex-basis: calc(100% / 3- var(--card-margin-horizontal));
+  flex-basis: calc(100% / 3 - var(--card-margin-horizontal));
 }
 .examples-link {
   margin-right: 0px;
